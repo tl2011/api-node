@@ -10,4 +10,5 @@ https://localhost:3001 <br>
 :small_blue_diamond:/animais <br>
 :small_blue_diamond:/carros <br>
 
-:black_nib: **Aluna: Talita Ferreira de Lima**
+## ✒️ Autora
+* **Talita Ferreira de Lima**
