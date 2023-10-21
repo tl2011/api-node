@@ -1,2 +1,13 @@
 # api-node
-trabalho puc minas
+API desenvolvida para o trabalho da matéria APIs e WebServices - Puc Minas
+
+## Importante
+Ter instalado NodeJS
+
+## Requisições
+https://localhost:3001 <br>
+:small_blue_diamond:/pessoas <br>
+:small_blue_diamond:/animais <br>
+:small_blue_diamond:/carros <br>
+
+:black_nib: Aluna: Talita Ferreira de Lima
