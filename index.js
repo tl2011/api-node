@@ -2,13 +2,17 @@ const express = require('express');
 const server = express();
 const apicache = require('apicache');
 const bodyParser = require('body-parser');
-const crypto = require('crypto');
+const https = require('https');
+const fs = require('fs');
+const cors = require('cors');
+const openssl = require('openssl-nodejs')
 
 let cache = apicache.middleware;
 
+server.use(express.json());
+server.use(cors());
 server.use(cache('2 minutes'));
 server.use(bodyParser.json());
-
 
 const resultados = {
   pessoas: [
@@ -60,5 +64,9 @@ server.get('/', (req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log('Servidor está rodando em http://localhost:3000')})
-    
+  console.log('Servidor está rodando em http://localhost:3000')})
+
+https.createServer({
+  cert: fs.readFileSync('src/SSL/code.crt'),
+  key: fs.readFileSync('src/SSL/code.key')
+}, server).listen(3001,() => console.log ("Rodando em https"));
